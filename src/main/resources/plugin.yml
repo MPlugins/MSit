@@ -1,0 +1,11 @@
+name: MSit
+version: ${project.version}
+main: org.mplugins.msit.MSit
+api-version: 1.17
+authors: [ MPlugins ]
+description: This plugin allows your players to sit on blocks
+website: https://mplugins.org
+
+commands:
+  sit:
+    permission: msit.sit
