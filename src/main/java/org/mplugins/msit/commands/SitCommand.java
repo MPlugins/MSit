@@ -37,9 +37,13 @@ public class SitCommand implements CommandExecutor, Listener
         {
             sitting.remove(player.getUniqueId());
 
-            if (player.getVehicle() != null)
-                player.getVehicle().eject();
-
+            if (player.getVehicle() != null && player.getVehicle() instanceof ArmorStand)
+            {
+                Entity vehicle = player.getVehicle();
+                vehicle.eject();
+                vehicle.remove();
+            }
+            
             return true;
         }
 
