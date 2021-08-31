@@ -11,6 +11,7 @@ import org.bukkit.entity.EntityType;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
+import org.bukkit.event.player.PlayerQuitEvent;
 import org.spigotmc.event.entity.EntityDismountEvent;
 
 import java.util.HashSet;
@@ -80,7 +81,7 @@ public class SitCommand implements CommandExecutor, Listener
 
         Entity vehicle = event.getDismounted();
         vehicle.eject();
-
+        vehicle.remove();
         sitting.remove(player.getUniqueId());
     }
 }
